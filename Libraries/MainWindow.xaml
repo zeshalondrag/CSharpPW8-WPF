@@ -1,0 +1,36 @@
+﻿<Window x:Class="Libraries.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Libraries"
+        mc:Ignorable="d"
+        Background="{DynamicResource Primary}"
+        WindowStartupLocation="CenterScreen"
+        Title="Библиотеки" Height="450" Width="800" MinHeight="350" MinWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="3" Grid.Row="1">
+            <Button x:Name="indigoTheme" Height="25" Margin="10,0,10,10" Content="Фиолетовая тема" FontWeight="Bold" Background="{DynamicResource Secondary}" Click="indigoTheme_Click"/>
+            <Button x:Name="aquamarineTheme" Height="25" Margin="10,0,10,0" Content="Розовая тема" FontWeight="Bold" Background="{DynamicResource Secondary}" Click="aquamarineTheme_Click"/>
+        </StackPanel>
+        <ListBox x:Name="dataLbx" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="3" FontWeight="Bold" Background="{DynamicResource Secondary}"/>
+        <StackPanel Grid.Column="3" Grid.Row="2" VerticalAlignment="Center">
+            <TextBox x:Name="inputText" Height="25" Margin="10,0,10,10" FontWeight="Bold" Background="{DynamicResource Secondary}" materialDesign:HintAssist.Hint="Написать слово..." materialDesign:TextFieldAssist.HasClearButton="True"/>
+            <Button x:Name="serializationBtn" Height="25" Margin="10,0,10,10" Content="Сериализация" FontWeight="Bold" Background="{DynamicResource Secondary}" Click="serializationBtn_Click"/>
+            <Button x:Name="deserializationBtn" Height="25" Margin="10,0,10,10" Content="Десериализация" FontWeight="Bold" Background="{DynamicResource Secondary}" Click="deserializationBtn_Click"/>
+        </StackPanel>
+        <TextBlock Grid.Column="3" Grid.Row="0" Text="Это типа восьмой практос" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Foreground="{DynamicResource Secondary}" TextWrapping="Wrap"/>
+        <Button x:Name="exitBtn" Grid.Column="3" Grid.Row="2" Height="25" Margin="10,0,10,10" Content="Выход" FontWeight="Bold" Background="{DynamicResource Secondary}" VerticalAlignment="Bottom" Click="exitBtn_Click"/>
+    </Grid>
+</Window>
